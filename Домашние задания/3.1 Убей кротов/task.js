@@ -9,7 +9,7 @@ for (let idx = 1; idx <= 9; idx++) {
   cell.addEventListener('click', () => {
     const hit = cell.classList.contains('hole_has-mole');
 
-    // обновляем счетчики
+
     const currentHits = parseInt(scoreHit.textContent);
     const currentMiss = parseInt(scoreMiss.textContent);
 
@@ -22,7 +22,6 @@ for (let idx = 1; idx <= 9; idx++) {
     const updatedHits = parseInt(scoreHit.textContent);
     const updatedMiss = parseInt(scoreMiss.textContent);
 
-    // проверка условий завершения игры
     if (updatedHits >= 10) {
       alert('Победа! Достигнуто 10 попаданий.');
       scoreHit.textContent = 0;
@@ -36,3 +35,4 @@ for (let idx = 1; idx <= 9; idx++) {
     }
   });
 }
+
