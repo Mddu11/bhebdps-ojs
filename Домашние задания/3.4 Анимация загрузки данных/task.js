@@ -31,4 +31,18 @@ function fetchData() {
       return;
     }
 
-    const valutes = request.response?.response?.
+    const valutes = request.response?.response?.Valute;
+    if (valutes) {
+      renderCurrencies(valutes);
+    }
+  };
+
+  request.onerror = () => {
+    spinner.classList.remove('loader_active');
+    console.warn('Произошла ошибка сети');
+  };
+
+  request.send();
+}
+
+fetchData();
